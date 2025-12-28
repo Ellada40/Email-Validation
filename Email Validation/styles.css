@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightgray;
+  height: 100vh;
+}
+.container{
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.email-submit{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.email-submit input{
+  margin: 10px 0;
+  height: 2rem;
+  padding: 0 0 0 5px;
+}
+.email-submit button{
+  padding: 7px 0;
+}
+.email-submit button:hover{
+  font-size: 1.0001rem;
+  font-weight: 600;
+  color: rgb(142, 100, 36);
+}
+.email-submit p{
+  color: red;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  display: none;
+}

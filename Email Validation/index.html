@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form action="#" id="formSubmit">
+    <div class="container">
+      <h2>Email Validation Form</h2>
+      <div class="email-submit">
+        <label for="email">Enter your email:</label>
+        <input id="email" name="email" required>
+        <p class="err-message"></p>
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    document.getElementById("formSubmit").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const message = document.querySelector(".err-message");
+
+      const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+
+      if(pattern.test(email)){
+        message.style.display = "none";
+        alert("Form submitted!");
+        document.getElementById("formSubmit").reset();
+      }else{
+        message.style.display = "block";
+        message.textContent = "Please enter valid email";
+      }
+    });
+  </script>
+</body>
+</html>
